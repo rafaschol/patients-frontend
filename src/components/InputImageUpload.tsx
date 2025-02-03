@@ -51,7 +51,7 @@ function InputImageUpload({
       setUploadingImage(true);
       const imageUrl = await uploadImage(event.target.files[0]);
       setImageUrl(imageUrl);
-    } catch () {
+    } catch (error) {
       toast.error(
         "An error occurred while uploading the image. Please try again later.",
       );
